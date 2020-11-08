@@ -6,7 +6,12 @@ pipeline {
   stages {
     stage('Read Data') {
       steps {
-        echo "THING"
+        script {
+          jsonString = params.data;
+          jsonObj = readJSON text: jsonString;
+        }
+ 
+        echo jsonObj
       }
     }
   }
