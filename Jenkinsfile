@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Read Data') {
       environment {
-        jsonObj = readJSON text: params.data;
+        jsonObj = readJSON text: params.DATA;
       }
       steps { 
         echo env.jsonObj
