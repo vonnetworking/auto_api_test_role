@@ -9,7 +9,7 @@ pipeline {
         jsonObj = readJSON text: params.data;
       }
       steps { 
-        echo jsonObj
+        echo env.jsonObj
       }
     }
   }
