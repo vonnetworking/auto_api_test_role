@@ -5,11 +5,13 @@ pipeline {
   }
   stages {
     stage('Read Data') {
-      script {
-        def jsonString = params.data
-        def jsonObj = readJSON text: jsonString
+      steps {
+        script {
+          def jsonString = params.data
+          def jsonObj = readJSON text: jsonString
+        }
+        echo jsonObj
       }
-      echo jsonObj
     }
   }
 }
