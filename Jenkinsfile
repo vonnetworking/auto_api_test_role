@@ -1,12 +1,18 @@
 pipeline {
   agent any
   parameters {
-    text(name: 'DATA', defaultValue: null, description: 'json data payload') }
+    text(name: 'DATA', defaultValue: null, description: 'json data payload')
   }
   stages {
     stage('Read Data') {
       steps {
-        echo 'Hello World!'
+        if {!params.DATA} {
+          def jsonString = '{}'
+        } else {
+          def jsonString = params.data
+          def jsonObj = readJSON text: jsonString
+        }
+        echo jsonObj
       }
     }
   }
