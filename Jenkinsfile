@@ -1,8 +1,10 @@
 pipeline {
   agent any
-
+  parameters {
+    text(name: 'DATA', defaultValue: null, description: 'json data payload') }
+  }
   stages {
-    stage('Hello World') {
+    stage('Read Data') {
       steps {
         echo 'Hello World!'
       }
