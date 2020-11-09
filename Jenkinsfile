@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Read Data') {
       environment {
-        jsonObj = readJson text: params.DATA;
+        jsonObj = readJSON text: params.DATA;
         extraVars = "$jsonObj.extraVars"
       }
       steps { 
