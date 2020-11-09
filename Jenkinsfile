@@ -23,7 +23,9 @@ pipeline {
         extraVars = "$jsonObj.extraVars"
       }
       steps { 
-        ansiblePlaybook(params.DATA)
+        ansiblePlaybook(params.DATA.playbook) {
+          params.DATA
+        }
       }
     }
   }
