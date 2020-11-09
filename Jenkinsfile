@@ -17,13 +17,13 @@ pipeline {
       }
     }
 
-    stage('Read Data') {
+    stage('Run Role') {
       environment {
         jsonObj = readJSON text: params.DATA;
         extraVars = "$jsonObj.extraVars"
       }
       steps { 
-        echo env.jsonObj
+        ansiblePlaybook(params.DATA)
       }
     }
   }
