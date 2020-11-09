@@ -5,10 +5,14 @@ pipeline {
   }
   stages {
     stage('Prep Env') {
-      steps {
-        dir ('roles') {
+      environment {
+        workspaceTar = "${env.WORKSPACE_TMP}/workspace.tar.gz"
+      }
+      steps { //tar up the role and publish it into roles directory
+        sh "tar -czf ${env.workspaceTar} ."
+        dir ('roles/this_role') {
           sh "pwd"
-          sh "rsync -av --exclude=roles --exclude=.git --progress .. ."
+          sh "tar -zxf ${env.workspaceTar}"
         }
       }
     }
