@@ -20,12 +20,13 @@ pipeline {
     stage('Run Role') {
       environment {
         jsonObj = readJSON text: params.DATA;
+        playbook = jsonObj.playbook.toString()
         jsonList = jsonObj.values().toList()
       }
       steps { 
         
         ansiblePlaybook([
-          playbook: env.jsonObj.playbook
+          playbook: env.playbook
         ])
        // ansiblePlaybook env.jsonObj
       }
