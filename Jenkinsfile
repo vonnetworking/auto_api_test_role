@@ -23,7 +23,8 @@ pipeline {
         extraVars = "$jsonObj.extraVars"
       }
       steps { 
-        ansiblePlaybook(jsonObj)
+        jsonList = jsonObj.values().toList()
+        ansiblePlaybook(*jsonList)
       }
     }
   }
