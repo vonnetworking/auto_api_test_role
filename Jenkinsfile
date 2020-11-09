@@ -8,7 +8,7 @@ pipeline {
       steps {
         dir ('roles') {
           sh "pwd"
-          sh "rsync -arv --exclude=roles --exclude=.git .. ."
+          sh "rsync -arv --exclude=roles --exclude=.git --progress .. ."
         }
       }
     }
