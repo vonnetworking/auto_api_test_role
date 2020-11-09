@@ -7,7 +7,7 @@ pipeline {
     stage('Read Data') {
       environment {
         jsonObj = readJson text: params.DATA;
-        extraVars = jsonObj.extraVars
+        extraVars = "$jsonObj.extraVars"
       }
       steps { 
         echo env.jsonObj
