@@ -24,7 +24,7 @@ pipeline {
       }
       steps { 
         
-        ansiblePlaybook(*jsonList)
+        ansiblePlaybook(jsonList)
       }
     }
   }
