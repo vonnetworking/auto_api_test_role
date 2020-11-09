@@ -1,0 +1,7 @@
+{
+    'playbook': 'wrapper.yml',
+    'inventoryList' : [],
+    'become': true,
+    'extraVars': 
+        {'var1': 'value'}
+}

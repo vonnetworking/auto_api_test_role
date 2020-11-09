@@ -1,0 +1,12 @@
+---
+# defaults file
+
+#available actions add-repo | add-skelton-repo | delete-repo | generate-config
+# see /README.md for additional details on using the various actions
+role_action: "add-skeleton-repo"
+#you have to override this or it will fail because the exists
+repo_name: "test_repo"
+#default to generic project dir
+repo_project: "Applications-Delivery"
+#URL to the repo that should serve as the base for the new repo
+skeleton_repo: "https://tpautomation.visualstudio.com/Applications-Delivery/_git/skeleton-ansible-repo"

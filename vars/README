@@ -1,0 +1,10 @@
+variables defined in the main.yml file in the vars directory will be available to the role as a whole.  if vars are put in any other file within the vars directory, they must be explicitly included in order to be accessible to the role
+
+for more info about variables visit:
+	http://docs.ansible.com/ansible/latest/playbooks_intro.html
+
+	http://docs.ansible.com/ansible/latest/playbooks_variables.html
+
+NOTE: preferred (and enforced) variable naming is all_lower_case with underscores_separating_terms, avoid camelCase, ALLCAPS, and-dashes
+
+

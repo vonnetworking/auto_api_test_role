@@ -1,0 +1,8 @@
+The templates directory should contain files that require variable substitution based on the server / environment in which a role / playbook is executing.  
+
+For details on the use of this directory visit:
+
+	http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#directory-layout	
+
+	http://docs.ansible.com/ansible/latest/template_module.html
+

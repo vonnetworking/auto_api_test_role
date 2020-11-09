@@ -1,0 +1,6 @@
+yml files in the handlers directory are lists of tasks, not really any different from regular tasks, that are referenced by a globally unique name, and are notified by notifiers. If nothing notifies a handler, it will not run. Regardless of how many tasks notify a handler, it will run only once, after all of the tasks complete in a particular play.
+
+for more information on handlers visit:
+	http://docs.ansible.com/ansible/latest/playbooks_intro.html
+	(Search, Handlers on page)
+	

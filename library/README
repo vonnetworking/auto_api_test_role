@@ -1,0 +1,1 @@
+the library subdirectory should contain any custom ansible modules (python files generally) that are needed for your role / playbook execution.  This directory is rarely used for most standard playbooks / roles, so generally this diectory will remain empty

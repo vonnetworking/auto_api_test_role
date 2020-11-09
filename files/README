@@ -1,0 +1,9 @@
+The files subdirectory should house static files that need to be copied to devices during a playbook / role execution.
+
+NOTE: for configuration or other files that may need different values by environment or server, please use the templates directory, as those files can use Jinja templating syntax for variable inclusion
+
+For additional info about the use of this directory visit:
+
+	http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#directory-layout
+
+

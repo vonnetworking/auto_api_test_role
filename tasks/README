@@ -1,0 +1,14 @@
+tasks defined in the main.yml file in the tasks directory will be executed as the main actions of the role.  if tasks are put in any other file within the tasks directory, they must be explicitly included in order to be accessible to the role
+
+for more info about tasks visit:
+	http://docs.ansible.com/ansible/latest/playbooks_intro.html
+
+and for more about including tasks from other yml files in the tasks directory visit:
+
+	http://docs.ansible.com/ansible/latest/include_module.html
+
+for a full list of all core modules available to your role visit:
+
+	http://docs.ansible.com/ansible/latest/modules_by_category.html
+
+NOTE: tasks should ALWAYS have a -name value that explains clearly what a task aims to do, additionally, use the "new" yml syntax exclusively (see main.yml for an example).

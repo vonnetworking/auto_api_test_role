@@ -1,0 +1,11 @@
+The tests directory is used to house several key files used in automated testing of ansible roles.  When you push a new version of the master branch of any configured role, the role will automatically:
+1. be syntax checked
+2. be run in a check mode
+3. be fully executed
+
+test.inventory - contains a list of test boxes on which a role shoudl be run, they MUST be in dev, and they must be pre-configured with the ansible test credentials (done by the automation team). 
+
+test_vars.json - this is a json formatted file containing any variables required at run-time, these values will be used in the execution of the test run
+
+test.yml - playbook used to execute the role being developed 
+NOTE: the default test.yml provided will run whatever role is specified in the "role_to_test" variable in test_vars.json

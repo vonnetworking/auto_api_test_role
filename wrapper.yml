@@ -1,0 +1,8 @@
+- hosts: all
+  become: true
+
+  vars:
+    example: 'value'
+    
+  roles:
+    - role: this_role

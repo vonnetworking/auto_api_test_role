@@ -1,0 +1,32 @@
+---
+# tasks file
+#
+# Task Examples
+############
+# Well formatted task:
+# 
+# named descriptively, clearly tells whats being done
+# uses the yml parameter naming format where key: value is specified for each param
+############
+#
+# - name: stop the apache httpd service in prep for config update #named descriptively, clearly tells whats being done
+#   service: #uses the yml parameter naming format where key: value is specified for each param 
+#     name: httpd
+#     state: stopped
+#
+############
+# Poorly formatted task:
+#
+# nebulously named
+# uses old hard to read format for parameters to be used by the module
+###########
+#
+# - name: apache stuff
+#   service: name=httpd state=stopped 
+#
+###########
+
+- name: "echo a message"
+  debug:
+    msg: "this is a message"
+

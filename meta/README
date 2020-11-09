@@ -1,0 +1,5 @@
+defines some meta data for this role
+
+for more info look at main.yml in this directory, or visit:
+	http://docs.ansible.com/ansible/latest/playbooks_reuse_roles.html
+	(Search 'meta')
