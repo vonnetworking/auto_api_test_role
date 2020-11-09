@@ -4,6 +4,12 @@ pipeline {
     text(name: 'DATA', defaultValue: '{}', description: 'json data payload')
   }
   stages {
+    stage('Prep Env') {
+      dir ('roles') {
+        sh "cp -r ../* ."
+      }
+    }
+    
     stage('Read Data') {
       environment {
         jsonObj = readJSON text: params.DATA;
