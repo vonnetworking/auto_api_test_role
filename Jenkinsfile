@@ -25,7 +25,7 @@ pipeline {
       steps { 
         
         ansiblePlaybook([
-          playbook: jsonObj.playbook
+          playbook: env.jsonObj.playbook
         ])
        // ansiblePlaybook env.jsonObj
       }
