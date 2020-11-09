@@ -24,7 +24,10 @@ pipeline {
       }
       steps { 
         
-        ansiblePlaybook(jsonList)
+        ansiblePlaybook( 
+          playbook: jsonObj.playbook,
+          extraVars: jsonObj.extraVars
+        )
       }
     }
   }
