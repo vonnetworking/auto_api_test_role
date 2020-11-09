@@ -24,10 +24,9 @@ pipeline {
       }
       steps { 
         
-        ansiblePlaybook( 
-          playbook: jsonObj.playbook,
+        ansiblePlaybook(jsonObj.playbook) {
           extraVars: jsonObj.extraVars
-        )
+        }
       }
     }
   }
