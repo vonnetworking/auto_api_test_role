@@ -7,7 +7,7 @@ pipeline {
     stage('Prep Env') {
       steps {
         dir ('roles') {
-          sh "rsync -rv --exclude=roles .. ."
+          sh "rsync -rv --exclude=roles --exclude=.git .. ."
         }
       }
     }
