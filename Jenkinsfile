@@ -5,11 +5,13 @@ pipeline {
   }
   stages {
     stage('Prep Env') {
-      dir ('roles') {
-        sh "cp -r ../* ."
+      steps {
+        dir ('roles') {
+          sh "cp -r ../* ."
+        }
       }
     }
-    
+
     stage('Read Data') {
       environment {
         jsonObj = readJSON text: params.DATA;
