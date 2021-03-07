@@ -1,0 +1,6 @@
+- name: test_role1
+  src: git+https://github.com/vonnetworking/ansible_test_role1.git
+  version: master
+  # List your role dependencies here, one per line.
+  # Be sure to remove the '[]' above if you add dependencies
+  # to this list.
