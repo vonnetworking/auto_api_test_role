@@ -26,7 +26,11 @@
 #
 ###########
 
-- name: "echo a message"
-  debug:
-    msg: "this is a message"
+- roles:
+  - test_role1
+- name: "Create /tmp/test_role0.out"
+  file:
+    path: /tmp/test_role0.out
+    state: touch
+    mode: u=rw,g=r,o=r
 
