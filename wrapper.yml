@@ -2,7 +2,7 @@
   become: true
 
   vars:
-    example: 'value'
+    example: "value"
     
   roles:
-    - {{ role_name }}
+    - "{{ role_name }}"
