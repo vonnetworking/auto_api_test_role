@@ -5,9 +5,10 @@ pipeline {
       steps {
         library 'automation'
         script {
-          runAnsible();
+          runAnsible()
         }
 
+        input(message: 'input_file', id: 'input_file')
       }
     }
 
