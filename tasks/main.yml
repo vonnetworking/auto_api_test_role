@@ -26,8 +26,9 @@
 #
 ###########
 
-- roles:
-  - test_role1
+- include_role:
+  name: test_role1
+  
 - name: "Create /tmp/test_role0.out"
   file:
     path: /tmp/test_role0.out
