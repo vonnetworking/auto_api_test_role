@@ -5,4 +5,4 @@
     example: 'value'
     
   roles:
-    - role: this_role
+    - role: {{ role_name }}
